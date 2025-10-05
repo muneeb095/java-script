@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ur-Latn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript Fundamental Concepts - A detailed guide on data types, variables, scope, and more in Roman Urdu.">
+    <title>JavaScript Fundamental Concepts - Ghazi Institute</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; padding: 20px; font-size: 17px; color: #333; margin: 0; background-color: #f9f9f9; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        h1 { font-size: 32px; color: #0056b3; text-align: center; text-decoration: underline; text-decoration-color: #007bff; text-underline-offset: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); margin-bottom: 25px; }
+        h2 { font-size: 26px; color: #2c3e50; border-bottom: 3px solid #007bff; padding-bottom: 10px; margin-top: 40px; }
+        h3 { font-size: 20px; color: #17a2b8; }
+        code { background-color: #e9ecef; padding: 10px 15px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; font-size: 16px; display: block; margin: 15px 0; white-space: pre-wrap; border: 1px solid #ddd; }
+        .inline-code { background-color: #e9ecef; padding: 2px 6px; border-radius: 4px; font-size: 15px; }
+        .note { background-color: #e7f5ff; border-left: 5px solid #007bff; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .important { background-color: #fffbe6; border-left: 5px solid #f0ad4e; padding: 15px; margin: 20px 0; border-radius: 5px; font-weight: bold; }
+        ul, ol { padding-left: 25px; }
+        footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 25px 20px; margin-top: 40px; }
+        footer p { margin: 8px 0; font-size: 15px; }
+        .powered-by { font-weight: bold; font-size: 16px; color: #ffffff; }
+        footer a { color: #ececec; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .copyright { font-size: 13px; color: #bdc3c7; margin-top: 15px; }
+        @media (max-width: 768px) {
+            body { padding: 10px; font-size: 16px; } .container { padding: 15px; } h1 { font-size: 26px; } h2 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ghazi Institute Of Information Technology</h1>
+        <h2>JavaScript ke Buniyadi Concepts (Detailed Guide)</h2>
+
+        <h3>1. Data Types (Data ki Qismein)</h3>
+        <p>Sochlein ke aapke paas alag alag qisam ke dabbe (containers) hain. Ek mein aap sirf "likhai" rakh sakte hain, ek mein "adad", aur ek mein sirf "Haan" ya "Na" ka jawab.</p>
+        
+        <h4>Primitive Types (Buniyadi - Sirf Ek Cheez Store Karne Walay)</h4>
+        <ul>
+            <li><strong>String:</strong> Koi bhi text. Iski pehchan hai ke yeh hamesha quotes <code class="inline-code">""</code> ya <code class="inline-code">''</code> ke andar hota hai.</li>
+            <code>var fruitName = "Apple";</code>
+            
+            <li><strong>Number:</strong> Koi bhi adad (chahe poora ho ya ishariya wala). Ismein quotes nahi hotay.</li>
+            <code>var price = 150;<br>var tax = 0.5;</code>
+            
+            <li><strong>Boolean:</strong> Sirf do hi qeemtein ho sakti hain: <code class="inline-code">true</code> (sach/haan) ya <code class="inline-code">false</code> (jhoot/na). Yeh `if` statements mein bohat istemal hota hai.</li>
+            <code>var isAdult = true;</code>
+        </ul>
+        
+        <h4>Non-Primitive Types (Advance - Ek se Zyada Cheezein Store Karne Walay)</h4>
+        <ul>
+            <li><strong>Object:</strong> Ek aisi cheez jismein multiple khasiyatein (properties) hoti hain. Jaise ek "Car" ka object, jiska color, model, aur speed alag alag properties hain.</li>
+            <code>var car = {<br>&nbsp;&nbsp;&nbsp;&nbsp;color: "Red",<br>&nbsp;&nbsp;&nbsp;&nbsp;model: 2024<br>};</code>
+            
+            <li><strong>Array:</strong> Ek jaisi cheezon ki ek list. Jaise students ke naam ya shopping ki list.</li>
+            <code>var fruits = ["Apple", "Banana", "Orange"];</code>
+        </ul>
+
+        <h3>2. Variables (<code class="inline-code">var</code>, <code class="inline-code">let</code>, <code class="inline-code">const</code>)</h3>
+        <p>Yeh wohi data ke containers hain. Naye JavaScript (ES6) mein inko banane ke 3 tareeqe hain.</p>
+        <ul>
+            <li><strong><code>var</code>:</strong> Yeh purana tareeqa hai. Iski value baad mein badal sakti hai. Iska scope thora ajeeb hai (function scope), isliye ab isay kam istemal karte hain.</li>
+            
+            <li><strong><code>let</code>:</strong> Yeh naya aur behtar tareeqa hai. Iski value bhi baad mein badal sakti hai.</li>
+            <code>let myAge = 25;<br>myAge = 26; // Theek hai, value badal gayi.</code>
+            
+            <li><strong><code>const</code>:</strong> "Constant" se nikla hai. Iski value ek baar set ho jaye to <b>dobara badal nahi sakti</b>.</li>
+            <code>const myCountry = "Pakistan";<br>myCountry = "India"; // Error! Aap const ki value nahi badal sakte.</code>
+        </ul>
+        <p class="important"><b>Rule of Thumb:</b> Hamesha <code>const</code> istemal karein. Jab aapko pata ho ke value baad mein badalni hai, tab <code>let</code> istemal karein. <code>var</code> ko naye code mein bhool jayen.</p>
+
+        <h3>3. Scope (Variable ki Puhnch ya Daira-e-Kaar)</h3>
+        <p>Scope ka matlab hai ke ek variable aapke code ke kis hissay mein "zinda" ya "available" hai.</p>
+        <ul>
+            <li><strong>Global Scope:</strong> Jo variable kisi bhi function ya block <code class="inline-code">{}</code> ke bahar banaya jaye, woh "public property" jaisa hai. Usay code mein kahin se bhi istemal kiya ja sakta hai.</li>
+            <code>var globalMessage = "Hello everyone!"; // Yeh Global hai</code>
+
+            <li><strong>Function Scope:</strong> Agar aap <code class="inline-code">var</code> ko kisi function ke andar banate hain, to woh sirf us function ke andar hi zinda rehta hai. Function ke bahar usay koi nahi janta.</li>
+
+            <li><strong>Block Scope <code>{}</code>:</strong> Yeh <code class="inline-code">let</code> aur <code class="inline-code">const</code> ki khasiyat hai. Agar aap inhein kisi bhi curly braces <code class="inline-code">{}</code> (jaise <code class="inline-code">if</code>, <code class="inline-code">for</code>) ke andar banate hain, to woh sirf unhi braces ke andar tak zinda rehte hain.</li>
+        </ul>
+        <code>if (true) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let blockMessage = "Sirf is block mein hoon"; // Yeh Block-scoped hai<br>}<br>// console.log(blockMessage); // Error! Kyunki blockMessage bahar zinda nahi hai.</code>
+        
+        <h3>4. Functions, Methods, aur Properties</h3>
+        <p>Aasan misal: Ek insaan (Object) ko sochen.</p>
+        <ul>
+            <li><strong>Property (Khasiyat):</strong> Insaan ka <b>naam</b>, <b>umar</b>, <b>rang</b>. Yeh uski khasiyatein hain. Yeh values hain.</li>
+            <code>var person = { name: "Ali" };<br>console.log(person.name); // 'name' ek property hai</code>
+            
+            <li><strong>Method (Kaam/Amal):</strong> Insaan ka <b>chalna()</b>, <b>bolna()</b>, <b>khana()</b>. Yeh woh kaam hain jo woh karta hai. Inke aage hamesha parentheses <code class="inline-code">()</code> hotay hain.</li>
+            <code>console.log("Hello"); // 'log()' ek method hai jo 'console' object se jura hai.</code>
+            
+            <li><strong>Function:</strong> Ek azaad "kaam" jo kisi object se nahi jura. Yeh ek recipe ki tarah hai, jise aap naam dekar jab chahein istemal kar sakte hain.</li>
+            <code>alert("Hello"); // 'alert()' ek predefined function hai.</code>
+        </ul>
+        
+        <h3>5. Keywords (JavaScript ke Reserve Alfaz)</h3>
+        <p>Yeh woh khaas alfaz hain jinka JavaScript mein pehle se ek matlab hai. Aap inhein variable ke naam ke taur par istemal nahi kar sakte.</p>
+        <p class="note"><b>Misalein:</b> <code class="inline-code">if</code>, <code class="inline-code">else</code>, <code class="inline-code">for</code>, <code class="inline-code">var</code>, <code class="inline-code">let</code>, <code class="inline-code">const</code>, <code class="inline-code">function</code>, <code class="inline-code">return</code>, <code class="inline-code">true</code>, <code class="inline-code">false</code>, <code class="inline-code">while</code>, <code class="inline-code">switch</code>, etc.</p>
+        <code>var for = "Loop"; // Error! 'for' ek keyword hai.</code>
+    </div>
+
+    <footer>
+        <p class="powered-by">Powered by Ghazi Marketing Company</p>
+        <p>Sir Muneeb Siddiqui | WhatsApp: <a href="https://wa.me/923343664438" target="_blank">+92 334 3664438</a></p>
+        <p class="copyright">&copy; 2025 Ghazi Institute Of Information Technology. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
