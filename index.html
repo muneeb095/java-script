@@ -129,6 +129,103 @@
                 font-size: 22px;
             }
         }
+
+        /* ============================================= */
+        /* == DARK MODE / LIGHT MODE STYLES START HERE == */
+        /* ============================================= */
+
+        /* Dark Theme Styles */
+        body.dark-theme {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-theme .container {
+            background-color: #1e1e1e;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .dark-theme .container a {
+            color: #e0e0e0;
+            transition: color .2s ease-in-out;
+        }
+
+        .dark-theme .container a:hover {
+            color: #bb86fc;
+        }
+
+        .dark-theme h1 {
+            color: #bb86fc;
+            text-decoration-color: #bb86fc;
+        }
+
+        .dark-theme h2 {
+            color: #03dac6;
+            border-bottom-color: #03dac6;
+        }
+
+        .dark-theme h3 {
+            color: #cf6679;
+            border-left-color: #cf6679;
+        }
+
+        .dark-theme code {
+            background-color: #2c2c2c;
+            border-color: #444;
+            color: #f2f2f2;
+        }
+
+        .dark-theme .note {
+            background-color: #2a3d4a;
+            border-left-color: #03dac6;
+        }
+
+        .dark-theme .important {
+            background-color: #4a3c2a;
+            border-left-color: #f0ad4e;
+        }
+
+        .dark-theme footer {
+            background-color: #1e1e1e;
+        }
+
+        .dark-theme footer a {
+            color: #03dac6;
+        }
+
+        .dark-theme #theme-toggle-btn {
+            background-color: #333;
+            color: #e0e0e0;
+            border: 1px solid #555;
+        }
+
+        /* Theme Toggle Button Styles */
+        #theme-toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        #theme-toggle-btn:hover {
+            background-color: #ddd;
+        }
+
+        /* For mobile screens */
+        @media (max-width: 950px) {
+            #theme-toggle-btn {
+                position: static;
+                display: block;
+                margin: -10px auto 25px auto;
+                width: 150px;
+            }
+        }
     </style>
 </head>
 
@@ -218,6 +315,55 @@
         <p>Sir Muneeb Siddiqui | WhatsApp: <a href="https://wa.me/923343664438" target="_blank">+92 334 3664438</a></p>
         <p class="copyright">&copy; 2025 Ghazi Institute Of Information Technology. All Rights Reserved.</p>
     </footer>
+
+    <!-- ============================================= -->
+    <!-- == THEME TOGGLE BUTTON & SCRIPT START HERE == -->
+    <!-- ============================================= -->
+    <button id="theme-toggle-btn">Toggle Theme</button>
+
+    <script>
+        // Theme toggle logic - Isay footer ke फौरन baad rakhein
+
+        // Pehle se zaroori cheezon ko select kar lete hain
+        const themeToggleButton = document.getElementById('theme-toggle-btn');
+        const bodyElement = document.body;
+
+        // Function jo theme ko apply karega
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                bodyElement.classList.add('dark-theme');
+                themeToggleButton.innerText = "Light Mode";
+            } else {
+                bodyElement.classList.remove('dark-theme');
+                themeToggleButton.innerText = "Dark Mode";
+            }
+        }
+
+        // Page load hotay hi theme check karna aur apply karna
+        // Isay foran chalana hai taake page jhatka na de (no flicker)
+        const savedTheme = localStorage.getItem('theme') || 'light'; // Agar koi theme save nahi hai to light mode default hoga
+        applyTheme(savedTheme);
+
+        // Button click par theme badalna aur save karna
+        themeToggleButton.addEventListener('click', function () {
+            let newTheme;
+            if (bodyElement.classList.contains('dark-theme')) {
+                // Agar pehle se dark hai, to light kar do
+                bodyElement.classList.remove('dark-theme');
+                newTheme = 'light';
+            } else {
+                // Warna dark kar do
+                bodyElement.classList.add('dark-theme');
+                newTheme = 'dark';
+            }
+
+            // Button ka text update karna
+            applyTheme(newTheme);
+
+            // Nayi theme ko browser mein save karna
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
 </body>
 
 </html>
