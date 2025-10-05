@@ -1,87 +1,236 @@
 <!DOCTYPE html>
 <html lang="ur-Latn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JavaScript Fundamental Concepts - A quick reference guide on data types, variables, scope, and more in Roman Urdu.">
+    <meta name="description"
+        content="JavaScript Fundamental Concepts - A quick reference guide on data types, variables, scope, and more in Roman Urdu.">
     <title>JavaScript Fundamental Concepts - Ghazi Institute</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; padding: 20px; font-size: 17px; color: #333; margin: 0; background-color: #f9f9f9; } .container { max-width: 900px; margin: auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); } h1 { font-size: 32px; color: #0056b3; text-align: center; text-decoration: underline; text-decoration-color: #007bff; text-underline-offset: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); margin-bottom: 25px; } h2 { font-size: 26px; color: #2c3e50; border-bottom: 3px solid #007bff; padding-bottom: 10px; margin-top: 30px; } h3 { font-size: 20px; color: #17a2b8; } code { background-color: #e9ecef; padding: 10px 15px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; font-size: 16px; display: block; margin: 15px 0; white-space: pre-wrap; border: 1px solid #ddd; } .note { background-color: #e7f5ff; border-left: 5px solid #007bff; padding: 15px; margin: 20px 0; border-radius: 5px; } footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 25px 20px; margin-top: 40px; } footer p { margin: 8px 0; font-size: 15px; } .powered-by { font-weight: bold; font-size: 16px; color: #ffffff; } footer a { color: #3498db; text-decoration: none; } footer a:hover { text-decoration: underline; } .copyright { font-size: 13px; color: #bdc3c7; margin-top: 15px; } @media (max-width: 768px) { body { padding: 10px; font-size: 16px; } .container { padding: 15px; } h1 { font-size: 26px; } h2 { font-size: 22px; } }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            font-size: 17px;
+            color: #333;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #0056b3;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: #007bff;
+            text-underline-offset: 8px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #2c3e50;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #17a2b8;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            display: block;
+            margin: 15px 0;
+            white-space: pre-wrap;
+            border: 1px solid #ddd;
+        }
+
+        .note {
+            background-color: #e7f5ff;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        .powered-by {
+            font-weight: bold;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: #bdc3c7;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Ghazi Institute Of Information Technology</h1>
         <h2>JavaScript ke Buniyadi (Fundamental) Concepts</h2>
-
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
         <h3>1. Data Types (Data ki Qismein)</h3>
-        <p>Har variable mein jo data store hota hai, uski ek qisam hoti hai. Yeh do baray groups mein taqseem hoti hain:</p>
+        <p>Har variable mein jo data store hota hai, uski ek qisam hoti hai. Yeh do baray groups mein taqseem hoti hain:
+        </p>
         <ul>
             <li>
                 <strong>Primitive Types (Buniyadi Qismein):</strong> Yeh sirf ek (single) value store karti hain.
                 <ul>
-                    <li><strong>String:</strong> Text, jo hamesha quotes <code>""</code> mein hota hai. e.g., <code>"Hello World"</code></li>
-                    <li><strong>Number:</strong> Koi bhi adad, bina quotes ke. e.g., <code>100</code>, <code>3.14</code></li>
-                    <li><strong>Boolean:</strong> Sirf do values: <code>true</code> (sach) ya <code>false</code> (jhoot).</li>
+                    <li><strong>String:</strong> Text, jo hamesha quotes <code>""</code> mein hota hai. e.g.,
+                        <code>"Hello World"</code></li>
+                    <li><strong>Number:</strong> Koi bhi adad, bina quotes ke. e.g., <code>100</code>, <code>3.14</code>
+                    </li>
+                    <li><strong>Boolean:</strong> Sirf do values: <code>true</code> (sach) ya <code>false</code>
+                        (jhoot).</li>
                     <li><strong>Undefined:</strong> Jab variable banaya gaya ho lekin usay koi value na di gayi ho.</li>
                     <li><strong>Null:</strong> Jab hum khud se kehte hain ke ismein "kuch nahi" hai.</li>
                 </ul>
             </li>
             <li>
-                <strong>Non-Primitive (or Reference) Types:</strong> Yeh ek se zyada (multiple) values ya complex data store karti hain.
+                <strong>Non-Primitive (or Reference) Types:</strong> Yeh ek se zyada (multiple) values ya complex data
+                store karti hain.
                 <ul>
-                    <li><strong>Object:</strong> Key-value pairs ka collection. e.g., <code>{ name: "Ali", age: 25 }</code></li>
-                    <li><strong>Array:</strong> Ek list, jismein multiple values store hoti hain. e.g., <code>["apple", "banana", "orange"]</code></li>
+                    <li><strong>Object:</strong> Key-value pairs ka collection. e.g.,
+                        <code>{ name: "Ali", age: 25 }</code></li>
+                    <li><strong>Array:</strong> Ek list, jismein multiple values store hoti hain. e.g.,
+                        <code>["apple", "banana", "orange"]</code></li>
                 </ul>
             </li>
         </ul>
 
         <h3>2. JavaScript Kaise Kaam Karti Hai? (V8 Engine)</h3>
-        <p>Aap jo code likhte hain, computer usay direct nahi samajhta. Usay machine language (0s and 1s) mein badalna parta hai.</p>
+        <p>Aap jo code likhte hain, computer usay direct nahi samajhta. Usay machine language (0s and 1s) mein badalna
+            parta hai.</p>
         <ul>
-            <li><strong>Translator (Interpreter/Compiler):</strong> Yeh woh program hai jo aapke code ko machine language mein badalta hai.</li>
-            <li><strong>V8 Engine:</strong> Yeh Google Chrome ka JavaScript engine (translator) hai. Yeh bohat tez hai kyunki yeh **Just-In-Time (JIT) compilation** istemal karta hai, jo interpreter aur compiler dono ki khoobiyon ko milata hai. Aasan lafzon mein, yeh aapke code ko run hone se pehle hi optimize kar leta hai taake woh tezi se chale.</li>
+            <li><strong>Translator (Interpreter/Compiler):</strong> Yeh woh program hai jo aapke code ko machine
+                language mein badalta hai.</li>
+            <li><strong>V8 Engine:</strong> Yeh Google Chrome ka JavaScript engine (translator) hai. Yeh bohat tez hai
+                kyunki yeh **Just-In-Time (JIT) compilation** istemal karta hai, jo interpreter aur compiler dono ki
+                khoobiyon ko milata hai. Aasan lafzon mein, yeh aapke code ko run hone se pehle hi optimize kar leta hai
+                taake woh tezi se chale.</li>
         </ul>
 
         <h3>3. Static vs Dynamic</h3>
         <p>Is context mein, iska matlab hai ke website ka content kaise badalta hai.</p>
         <ul>
-            <li><strong>Static:</strong> HTML aur CSS se bani website jiska content tab tak nahi badalta jab tak aap code ko khud na badlein.</li>
-            <li><strong>Dynamic:</strong> JavaScript ke zariye hum website ko dynamic banate hain. Matlab, user ke actions (click, scroll) par content badal sakta hai, bina page reload kiye. Yeh sab **DOM (Document Object Model)** ke zariye hota hai.</li>
+            <li><strong>Static:</strong> HTML aur CSS se bani website jiska content tab tak nahi badalta jab tak aap
+                code ko khud na badlein.</li>
+            <li><strong>Dynamic:</strong> JavaScript ke zariye hum website ko dynamic banate hain. Matlab, user ke
+                actions (click, scroll) par content badal sakta hai, bina page reload kiye. Yeh sab **DOM (Document
+                Object Model)** ke zariye hota hai.</li>
         </ul>
 
         <h3>4. Variables (<code>var</code>, <code>let</code>, <code>const</code>)</h3>
         <p>Yeh data store karne ke containers hain. Teen tarah ke hotay hain:</p>
         <ul>
-            <li><strong><code>var</code>:</strong> Yeh purana tareeqa hai. Iski value badal sakti hai aur yeh **function-scoped** hota hai.</li>
-            <li><strong><code>let</code>:</strong> Yeh naya aur behtar tareeqa hai. Iski value badal sakti hai aur yeh **block-scoped** hota hai.</li>
-            <li><strong><code>const</code>:</strong> "Constant" se nikla hai. Iski value ek baar set ho jaye to **dobara badal nahi sakti**. Yeh bhi **block-scoped** hota hai.</li>
+            <li><strong><code>var</code>:</strong> Yeh purana tareeqa hai. Iski value badal sakti hai aur yeh
+                **function-scoped** hota hai.</li>
+            <li><strong><code>let</code>:</strong> Yeh naya aur behtar tareeqa hai. Iski value badal sakti hai aur yeh
+                **block-scoped** hota hai.</li>
+            <li><strong><code>const</code>:</strong> "Constant" se nikla hai. Iski value ek baar set ho jaye to **dobara
+                badal nahi sakti**. Yeh bhi **block-scoped** hota hai.</li>
         </ul>
-        <p class="note"><b>Achi Practice:</b> Ab naye code mein zyada tar <code>let</code> aur <code>const</code> istemal karein. <code>var</code> ko kam se kam istemal karein.</p>
+        <p class="note"><b>Achi Practice:</b> Ab naye code mein zyada tar <code>let</code> aur <code>const</code>
+            istemal karein. <code>var</code> ko kam se kam istemal karein.</p>
 
         <h3>5. Scope (Variable ki Puhnch)</h3>
         <p>Scope ka matlab hai ke ek variable aapke code ke kis hissay mein "zinda" ya "available" hai.</p>
         <ul>
-            <li><strong>Global Scope:</strong> Jo variable kisi bhi function ya block ke bahar banaya jaye, woh har jagah available hota hai.</li>
-            <li><strong>Function Scope:</strong> Jo variable <code>var</code> ke saath kisi function ke andar banaya jaye, woh sirf us function ke andar hi istemal ho sakta hai.</li>
-            <li><strong>Block Scope <code>{}</code>:</strong> Jo variable <code>let</code> ya <code>const</code> ke saath kisi curly braces <code>{}</code> (jaise <code>if</code>, <code>for</code>) ke andar banaya jaye, woh sirf us block ke andar hi istemal ho sakta hai.</li>
+            <li><strong>Global Scope:</strong> Jo variable kisi bhi function ya block ke bahar banaya jaye, woh har
+                jagah available hota hai.</li>
+            <li><strong>Function Scope:</strong> Jo variable <code>var</code> ke saath kisi function ke andar banaya
+                jaye, woh sirf us function ke andar hi istemal ho sakta hai.</li>
+            <li><strong>Block Scope <code>{}</code>:</strong> Jo variable <code>let</code> ya <code>const</code> ke
+                saath kisi curly braces <code>{}</code> (jaise <code>if</code>, <code>for</code>) ke andar banaya jaye,
+                woh sirf us block ke andar hi istemal ho sakta hai.</li>
         </ul>
 
         <h3>6. Functions, Methods, aur Properties</h3>
         <p>Inmein thora sa farq hai:</p>
         <ul>
-            <li><strong>Function:</strong> Ek code ka block jise hum naam dekar baar baar chala sakte hain. e.g., <code>alert()</code>, <code>prompt()</code>.</li>
-            <li><strong>Method:</strong> Ek function jo kisi object ke saath jura ho. e.g., <code>console.log()</code>. Yahan <code>console</code> ek object hai aur <code>log</code> uska method hai.</li>
-            <li><strong>Property:</strong> Ek object ke saath juri hui koi value ya khasiyat. e.g., <code>array.length</code>. Yahan <code>array</code> ek object hai aur <code>length</code> uski property (khasiyat) hai.</li>
+            <li><strong>Function:</strong> Ek code ka block jise hum naam dekar baar baar chala sakte hain. e.g.,
+                <code>alert()</code>, <code>prompt()</code>.</li>
+            <li><strong>Method:</strong> Ek function jo kisi object ke saath jura ho. e.g., <code>console.log()</code>.
+                Yahan <code>console</code> ek object hai aur <code>log</code> uska method hai.</li>
+            <li><strong>Property:</strong> Ek object ke saath juri hui koi value ya khasiyat. e.g.,
+                <code>array.length</code>. Yahan <code>array</code> ek object hai aur <code>length</code> uski property
+                (khasiyat) hai.</li>
         </ul>
         <code>var cars = ["Saab", "Volvo", "BMW"];<br>cars.length; // Yeh 'property' hai (jawab 3 aayega)<br>console.log(cars); // Yeh 'method' hai (array ko console mein print karega)</code>
-        
+
         <h3>7. Keywords (Khaas Alfaz)</h3>
-        <p>Yeh JavaScript ke apne reserve alfaz hain jinka khaas matlab hota hai aur aap inhein variable ke naam ke taur par istemal nahi kar sakte.</p>
-        <p>e.g., <code>if</code>, <code>else</code>, <code>for</code>, <code>var</code>, <code>function</code>, <code>return</code>, etc.</p>
-        
+        <p>Yeh JavaScript ke apne reserve alfaz hain jinka khaas matlab hota hai aur aap inhein variable ke naam ke taur
+            par istemal nahi kar sakte.</p>
+        <p>e.g., <code>if</code>, <code>else</code>, <code>for</code>, <code>var</code>, <code>function</code>,
+            <code>return</code>, etc.</p>
+
         <h3>8. Nested `if` (if ke andar if)</h3>
-        <p>Jab aap ek <code>if</code> statement ke andar ek aur <code>if</code> statement likhte hain to isay "nesting" kehte hain. Yeh complex conditions check karne ke kaam aata hai.</p>
+        <p>Jab aap ek <code>if</code> statement ke andar ek aur <code>if</code> statement likhte hain to isay "nesting"
+            kehte hain. Yeh complex conditions check karne ke kaam aata hai.</p>
     </div>
     <footer>
         <p class="powered-by">Powered by Ghazi Marketing Company</p>
@@ -89,4 +238,5 @@
         <p class="copyright">&copy; 2025 Ghazi Institute. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>

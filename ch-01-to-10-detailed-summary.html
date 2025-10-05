@@ -1,35 +1,147 @@
 <!DOCTYPE html>
 <html lang="ur-Latn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JavaScript Chapters 1 to 10 Detailed Summary - All essential rules, syntax, and key concepts for beginners in Roman Urdu.">
+    <meta name="description"
+        content="JavaScript Chapters 1 to 10 Detailed Summary - All essential rules, syntax, and key concepts for beginners in Roman Urdu.">
     <title>Chapters 1-10 Detailed Summary - Ghazi Institute</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; padding: 20px; font-size: 17px; color: #333; margin: 0; background-color: #f9f9f9; }
-        .container { max-width: 900px; margin: auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
-        h1 { font-size: 32px; color: #0056b3; text-align: center; text-decoration: underline; text-decoration-color: #007bff; text-underline-offset: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); margin-bottom: 25px; }
-        h2 { font-size: 28px; color: #2c3e50; border-bottom: 3px solid #007bff; padding-bottom: 10px; margin-top: 40px; }
-        h3 { font-size: 22px; color: #17a2b8; margin-top: 30px; border-left: 4px solid #17a2b8; padding-left: 10px;}
-        code { background-color: #e9ecef; padding: 10px 15px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; font-size: 16px; display: block; margin: 15px 0; white-space: pre-wrap; border: 1px solid #ddd; }
-        .note { background-color: #fffbe6; border-left: 5px solid #f0ad4e; padding: 15px; margin: 20px 0; border-radius: 5px; font-weight: bold; }
-        ul, ol { padding-left: 25px; }
-        footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 25px 20px; margin-top: 40px; }
-        footer p { margin: 8px 0; font-size: 15px; }
-        .powered-by { font-weight: bold; font-size: 16px; color: #ffffff; }
-        footer a { color: #ececec; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        .copyright { font-size: 13px; color: #bdc3c7; margin-top: 15px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            font-size: 17px;
+            color: #333;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #0056b3;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: #007bff;
+            text-underline-offset: 8px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+            color: #17a2b8;
+            margin-top: 30px;
+            border-left: 4px solid #17a2b8;
+            padding-left: 10px;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            display: block;
+            margin: 15px 0;
+            white-space: pre-wrap;
+            border: 1px solid #ddd;
+        }
+
+        .note {
+            background-color: #fffbe6;
+            border-left: 5px solid #f0ad4e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        .powered-by {
+            font-weight: bold;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #ececec;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: #bdc3c7;
+            margin-top: 15px;
+        }
+
         @media (max-width: 768px) {
-            body { padding: 10px; font-size: 16px; } .container { padding: 15px; } h1 { font-size: 26px; } h2 { font-size: 22px; }
+            body {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Ghazi Institute Of Information Technology</h1>
         <h2>Detailed Summary: Chapters 1 to 10</h2>
-
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
         <h3>Chapter 1: Alerts (Pop-up Messages)</h3>
         <p><b>Core Concept:</b> User ko screen par ek chota pop-up message dikhana.</p>
         <ul>
@@ -38,7 +150,8 @@
             <li>Har statement ke akhir mein semicolon <code>;</code> lagana achi practice hai.</li>
         </ul>
         <code>alert("This is a message!");</code>
-        <p class="note"><b>Sabse Zaroori Baat:</b> <code>alert</code> hamesha lowercase mein likha jaata hai. <code>Alert</code> likhne se error aayega.</p>
+        <p class="note"><b>Sabse Zaroori Baat:</b> <code>alert</code> hamesha lowercase mein likha jaata hai.
+            <code>Alert</code> likhne se error aayega.</p>
 
         <h3>Chapter 2 & 3: Variables (Strings aur Numbers)</h3>
         <p><b>Core Concept:</b> Data (information) ko waqti taur par store karne ke liye "containers" banana.</p>
@@ -50,41 +163,51 @@
             <li><b>Numbers:</b> Hamesha bina quotes ke aate hain.</li>
         </ul>
         <code>var myName = "Ali"; // Yeh ek String hai<br>var myAge = 25;      // Yeh ek Number hai</code>
-        <p class="note"><b>Sabse Zaroori Baat:</b> Number ko kabhi bhi quotes mein na likhein agar aap us par math karna chahte hain. <code>"25"</code> ek text hai, jabke <code>25</code> ek number hai.</p>
+        <p class="note"><b>Sabse Zaroori Baat:</b> Number ko kabhi bhi quotes mein na likhein agar aap us par math karna
+            chahte hain. <code>"25"</code> ek text hai, jabke <code>25</code> ek number hai.</p>
 
         <h3>Chapter 4: Variable Naming Rules</h3>
         <p><b>Core Concept:</b> Variables ke naam rakhne ke sahi aur ghalat tareeqe.</p>
         <ul>
             <li>Naam mein <b>space nahi</b> ho sakta.</li>
             <li>Naam <b>number se shuru nahi</b> ho sakta.</li>
-            <li>Naam mein sirf letters, numbers, underscore <code>_</code>, aur dollar sign <code>$</code> ho sakte hain.</li>
-            <li><b>Best Practice:</b> Do ya zyada lafzon ke naam ke liye <b><code>camelCase</code></b> istemal karein (e.g., <code>myVariableName</code>).</li>
+            <li>Naam mein sirf letters, numbers, underscore <code>_</code>, aur dollar sign <code>$</code> ho sakte
+                hain.</li>
+            <li><b>Best Practice:</b> Do ya zyada lafzon ke naam ke liye <b><code>camelCase</code></b> istemal karein
+                (e.g., <code>myVariableName</code>).</li>
             <li>Naam hamesha <b>meaningful</b> (matlab wala) rakhein.</li>
         </ul>
         <code>var customerFirstName = "Hassan"; // Acha Naam<br>var x = "Hassan";           // Bura Naam</code>
-        <p class="note"><b>Sabse Zaroori Baat:</b> JavaScript <b>case-sensitive</b> hai. Iska matlab hai <code>name</code> aur <code>Name</code> do alag alag variables samjhe jayenge.</p>
+        <p class="note"><b>Sabse Zaroori Baat:</b> JavaScript <b>case-sensitive</b> hai. Iska matlab hai
+            <code>name</code> aur <code>Name</code> do alag alag variables samjhe jayenge.</p>
 
         <h3>Chapter 5 & 7: Math Expressions & Ambiguity</h3>
         <p><b>Core Concept:</b> JavaScript mein hisaab-kitaab karna aur calculation ke order ko control karna.</p>
         <ul>
-            <li>Aam operators: <code>+</code> (add), <code>-</code> (subtract), <code>*</code> (multiply), <code>/</code> (divide).</li>
+            <li>Aam operators: <code>+</code> (add), <code>-</code> (subtract), <code>*</code> (multiply),
+                <code>/</code> (divide).</li>
             <li><code>%</code> (modulus) operator division ke baad <b>baaqi (remainder)</b> batata hai.</li>
-            <li>JavaScript pehle <code>*</code> aur <code>/</code> solve karta hai, phir <code>+</code> aur <code>-</code>.</li>
+            <li>JavaScript pehle <code>*</code> aur <code>/</code> solve karta hai, phir <code>+</code> aur
+                <code>-</code>.</li>
         </ul>
         <code>var total = 10 + 5 * 2; // Result 20 hoga, 30 nahi.</code>
-        <p class="note"><b>Sabse Zaroori Baat:</b> Hamesha <b>parentheses <code>()</code></b> ka istemal karke calculation ka order wazeh (clear) karein. <code>var total = (10 + 5) * 2;</code> ka result 30 hoga.</p>
+        <p class="note"><b>Sabse Zaroori Baat:</b> Hamesha <b>parentheses <code>()</code></b> ka istemal karke
+            calculation ka order wazeh (clear) karein. <code>var total = (10 + 5) * 2;</code> ka result 30 hoga.</p>
 
         <h3>Chapter 6: Increment (++) & Decrement (--)</h3>
         <p><b>Core Concept:</b> Kisi number variable mein 1 jama ya minus karne ke shortcuts.</p>
         <ul>
             <li><code>++</code> variable mein 1 jama karta hai.</li>
             <li><code>--</code> variable se 1 minus karta hai.</li>
-            <li><b>Postfix (<code>num++</code>):</b> Pehle variable ki purani value istemal hoti hai, phir value barhti hai.</li>
-            <li><b>Prefix (<code>++num</code>):</b> Pehle variable ki value barhti hai, phir uski nayi value istemal hoti hai.</li>
+            <li><b>Postfix (<code>num++</code>):</b> Pehle variable ki purani value istemal hoti hai, phir value barhti
+                hai.</li>
+            <li><b>Prefix (<code>++num</code>):</b> Pehle variable ki value barhti hai, phir uski nayi value istemal
+                hoti hai.</li>
         </ul>
         <code>var score = 10;<br>var newScore = score++; // newScore mein 10 aayega, aur score 11 ho jayega.</code>
-        <p class="note"><b>Sabse Zaroori Baat:</b> Postfix aur Prefix ka farq tabhi saamne aata hai jab aap usay ek hi line mein kisi doosre variable ko assign kar rahe hon.</p>
-        
+        <p class="note"><b>Sabse Zaroori Baat:</b> Postfix aur Prefix ka farq tabhi saamne aata hai jab aap usay ek hi
+            line mein kisi doosre variable ko assign kar rahe hon.</p>
+
         <h3>Chapter 8: Concatenating Text Strings</h3>
         <p><b>Core Concept:</b> Text (strings) ko aapas mein jorne ke liye <code>+</code> operator ka istemal.</p>
         <ul>
@@ -92,7 +215,9 @@
             <li>Space jorne ke liye, aapko <code>" "</code> ko alag se jorna parta hai.</li>
         </ul>
         <code>var userName = "Sana";<br>var message = "Welcome, " + userName + "!"; // message banega "Welcome, Sana!"</code>
-        <p class="note"><b>Sabse Zaroori Baat:</b> Agar <code>+</code> ke saath ek string aur ek number ho, to JavaScript hamesha jorne (concatenation) ko tarjeeh dega, math ko nahi. <code>"Score: " + 10 + 5</code> ka result <code>"Score: 105"</code> hoga.</p>
+        <p class="note"><b>Sabse Zaroori Baat:</b> Agar <code>+</code> ke saath ek string aur ek number ho, to
+            JavaScript hamesha jorne (concatenation) ko tarjeeh dega, math ko nahi. <code>"Score: " + 10 + 5</code> ka
+            result <code>"Score: 105"</code> hoga.</p>
 
         <h3>Chapter 9: Prompts</h3>
         <p><b>Core Concept:</b> User se input (jawab) lene ke liye ek pop-up box dikhana.</p>
@@ -102,17 +227,21 @@
             <li>Aap ek sawal aur ek default jawab de sakte hain.</li>
         </ul>
         <code>var userCity = prompt("Aapka sheher konsa hai?", "Karachi");</code>
-        <p class="note"><b>Sabse Zaroori Baat:</b> <code>prompt()</code> se milne wala jawab hamesha, hamesha, hamesha ek <b>string (text)</b> hota hai, chahe user ne usmein number hi kyun na likha ho.</p>
+        <p class="note"><b>Sabse Zaroori Baat:</b> <code>prompt()</code> se milne wala jawab hamesha, hamesha, hamesha
+            ek <b>string (text)</b> hota hai, chahe user ne usmein number hi kyun na likha ho.</p>
 
         <h3>Chapter 10: `if` Statements</h3>
-        <p><b>Core Concept:</b> Code ko "sochne" aur shart (condition) ke buniyad par faisla karne ki salahiyat dena.</p>
+        <p><b>Core Concept:</b> Code ko "sochne" aur shart (condition) ke buniyad par faisla karne ki salahiyat dena.
+        </p>
         <ul>
             <li><code>if</code> ka matlab hai "Agar".</li>
             <li>Shart (condition) hamesha parentheses <code>()</code> ke andar likhi jaati hai.</li>
             <li>Agar shart sach (true) ho, to curly braces <code>{}</code> ke andar wala code chalta hai.</li>
         </ul>
         <code>var age = 20;<br>if (age >= 18) {<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("You are an adult.");<br>}</code>
-        <p class="note"><b>Sabse Zaroori Baat:</b> Value **check** karne ke liye hamesha <b><code>===</code> (triple equals)</b> istemal karein. Single equal <code>=</code> sirf value **store** karne ke liye hota hai. Yeh beginners ki sabse aam ghalti hai!</p>
+        <p class="note"><b>Sabse Zaroori Baat:</b> Value **check** karne ke liye hamesha <b><code>===</code> (triple
+                equals)</b> istemal karein. Single equal <code>=</code> sirf value **store** karne ke liye hota hai. Yeh
+            beginners ki sabse aam ghalti hai!</p>
     </div>
 
     <footer>
@@ -121,4 +250,5 @@
         <p class="copyright">&copy; 2025 Ghazi Institute Of Information Technology. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>
